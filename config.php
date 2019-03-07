@@ -12,6 +12,9 @@ Kirby::plugin('timoetting/kirbybuilder', [
       'props' => [
         'value' => function ($value = null) {
           return $value;
+        },
+        'defaultview' => function ($defaultview = 'edit') {
+          return $defaultview;
         }
       ],
       'computed' => [

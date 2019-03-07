@@ -97,7 +97,8 @@ export default {
     encodedPageId: String,
     styles: String,
     script: String,
-    parentPath: String
+    parentPath: String,
+    defaultview: String
   },
   components: {
     BuilderPreview
@@ -116,6 +117,9 @@ export default {
     }
     if (!this.activeFieldSet) {
       this.activeFieldSet = this.fieldSets[0].key;
+    }
+    if(this.defaultview === 'preview'){
+      this.showPreview = true;
     }
     let localUiState = JSON.parse(localStorage.getItem(this.localUiStateKey));
     if (localUiState) {

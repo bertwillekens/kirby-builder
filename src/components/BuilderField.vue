@@ -38,6 +38,7 @@
           :styles="cssContents[block.blockKey]"
           :script="jsContents[block.blockKey]"
           :parentPath="path"
+          :defaultview="defaultview"
           @input="onBlockInput"
           @clone="cloneBlock"
           @delete="deleteBlock"
@@ -109,7 +110,8 @@ export default {
     encodedPageId: String,
     cssUrls: String,
     jsUrls: String,
-    parentPath: String
+    parentPath: String,
+    defaultview: String
   },
   components: {
     BuilderBlock
