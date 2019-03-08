@@ -118,7 +118,7 @@ export default {
     if (!this.activeFieldSet) {
       this.activeFieldSet = this.fieldSets[0].key;
     }
-    if(this.defaultview === 'preview'){
+    if(!this.block.isNew && this.defaultview === 'preview'){
       this.showPreview = true;
     }
     let localUiState = JSON.parse(localStorage.getItem(this.localUiStateKey));
